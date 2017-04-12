@@ -1,0 +1,32 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} Image List {% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <style type="text/css">
+        .img-preview{
+            max-height:200px;
+            max-width:200px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-4">
+    <h3>List of images</h3>
+    <table class="table">
+        {% for file in file_list %}
+            <tr>
+                <td>
+                    <a href="{{ image_url }}{{ file[0] }}">{{ file[0] }}</a>
+                </td>
+                <td>
+                    <a href="{{ image_url }}{{ file[0] }}">
+                        <img class="img-preview" src="{{ image_url }}{{ file[0] }}"/></a></td>
+                <td><a href="{{ deletion_url }}{{ file[0] }}/confirm">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    </div>
+
+{% endblock %}

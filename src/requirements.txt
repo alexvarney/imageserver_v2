@@ -1,0 +1,15 @@
+Flask
+Flask-Bootstrap
+Jinja2
+MarkupSafe
+Werkzeug
+appdirs
+click
+dominate
+itsdangerous
+packaging
+pip
+pyparsing
+setuptools
+six
+visitor

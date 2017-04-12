@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} Upload {% endblock %}
+
+{% block body %}
+    <div class="col-md-4">
+        <h3>Image Upload</h3>
+
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('main.upload') }}">
+            <input type="file" name="photo">
+            <input type="submit">
+        </form>
+    </div>
+
+{% endblock %}
